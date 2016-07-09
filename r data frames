@@ -31,6 +31,7 @@ planets_df[1,3]
 
 
 
+
 # print out mars[4 row]
 
 planets_df[4,]
@@ -72,7 +73,7 @@ order(diameter)
 # shorting your data
  
 positions <- order(planets_df$diameter)
-
+hist(planets_df, main="positions of planets", xlab="score")
 
 
 
