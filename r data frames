@@ -1,0 +1,77 @@
+# defination of vector
+ name<- c("mercury","venus","earth","mars","jupiter","saturn","utanus","neptune")
+
+type<- c("terrestrial planet","terrestrial planet","terrestrial planet","terrestrial planet",
+        "gas giant","gas giant","gas giant","gas gaint")
+
+diameter<- c(0.382,0.949,0.532,11.209,9.449,4.007,3.883)
+rotations<- c(58.64,-243.02,1,1.03,0.41,0.43,-0.72,0.67)
+rings <- c(FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE)
+
+# creat a data frame from vector
+
+planets_df<- data.frame(name,type,diameter,rotations,rings)
+ 
+
+# print the planets_df
+
+planets_df
+
+
+# check the structure of data frame
+
+str(planets_df)
+
+# selection of data elements mercury[1 row, 3 colum]
+
+planets_df[1,3]
+
+
+# print out mars[4 row]
+
+planets_df[4,]
+
+
+# selection of element
+
+planets_df[1:3,1]
+
+
+# selection of element[2]
+
+planets_df[1:3,"diameter"]
+
+
+
+# selection of ring_vector from planets data frame
+
+rings_vector<- planets_df$rings
+
+
+# print out the rings_vector
+ rings_vector
+
+
+#  print code to select all elemnts of the rings
+   planets_df[rings_vector, ,]
+
+
+
+# only planets with rings
+
+subset(planets_df, diameter < 1)
+
+# shorting the data frame value
+ 
+order(diameter)
+
+# shorting your data
+ 
+positions <- order(planets_df$diameter)
+
+
+
+
+
+
+
